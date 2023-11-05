@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Data</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: row;
+            text-align: center;
+        }
+
+        .right-table-container {
+            width: 20%;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 10px;
+        }
+
+        .table-container {
+            width: 100%;
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 10px;
+        }
+
+        .center-table-container {
+            width: 100%;
+            text-align: center;
+            margin: 250;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSV Data</h1>
+    <div class="table-container">
+        <h2>Company report</h2>
+        <table border="1">
+            <tr>
+                <th>address</th>
+                <th>total</th>
+                <th>parts</th>
+                <th>zip code</th>
+                <th>job type</th>
+                <th>duplicate jobs</th>
+                <!-- Add more headers as needed -->
+            </tr>
+            {% for row in data1 %}
+            <tr>
+                <td>{{ row['address'] }}</td>
+                <td>{{ row['total'] }}</td>
+                <td>{{ row['parts'] }}</td>
+                <td>{{ row['zip code'] }}</td>
+                <td>{{ row['job type'] }}</td>
+                <td>{{ row['Comment'] }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="right-table-container">
+        <h2>Sunny report</h2>
+        <table border="1">
+            <tr>
+                <th>address</th>
+                <th>total</th>
+                <th>parts</th>
+                <th>zip code</th>
+                <th>job type</th>
+                <th>duplicate jobs</th>
+                <!-- Add more headers as needed -->
+            </tr>
+            {% for row in data2 %}
+            <tr>
+                <td>{{ row['address'] }}</td>
+                <td>{{ row['total'] }}</td>
+                <td>{{ row['parts'] }}</td>
+                <td>{{ row['zip code'] }}</td>
+                <td>{{ row['job type'] }}</td>
+                <td>{{ row['Comment'] }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+<div class="center-table-container">
+    <h2>Middle Table</h2>
+    <table border="1">
+        <tr>
+            <th>Addres</th>
+            <th>where is the problem</th>
+            <!-- Add more headers as needed -->
+        </tr>
+        {% for row in data3 %}
+        <tr>
+            <td>{{ row['address'] }}</td>
+            <td>{{ row['comments'] }}</td>
+
+            <!-- Add more columns as needed -->
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

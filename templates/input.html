@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Guess Game{% endblock %}
+{% block content%}
+<ul class="game pick" id="Guess_game">
+    <h1>It looks the same, but we need your approval</h1>
+    <p>Enter 'r' to remove, 'k' to keep, or 's' to skip: {{ value }}</p>
+    <p>
+        <form method="POST">
+            <input name="user_guess" id="user_guess" type="text" placeholder="Insert your guess">
+            <br>
+            <input type="submit" value="Insert Guess" class="btn btn-primary">
+        </form>
+    </p>
+</ul>
+{% endblock %}

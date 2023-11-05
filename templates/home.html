@@ -1,0 +1,12 @@
+
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+
+<h1 align="center">Menu</h1>
+
+    <h1>Please choose the reports you want to compare</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file1" accept=".html" required><br><br>
+        <input type="file" name="file2" accept=".html" required><br><br>
+        <input type="submit" value="Compare Reports">
+    </form>
+{% endblock %}
